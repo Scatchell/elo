@@ -36,6 +36,5 @@
 (defn process-file [file k-factor starting-score]
   (binding [*k-factor*       k-factor
             *starting-score* starting-score]
-    (reduce update-scores
-            {}
+    (reduce update-scores {}
             (game-seq file))))
